@@ -1,3 +1,4 @@
+using Burger.Core;
 using Burger.Core.Save;
 using Raylib_cs;
 
@@ -12,19 +13,19 @@ public sealed partial class Hud
         if (Ui.SettingsOpen) { DrawSettingsPanel(); return; }
         float w = 300 * S, h = 380 * S;
         var r = new Rectangle((Raylib.GetScreenWidth() - w) / 2, (Raylib.GetScreenHeight() - h) / 2, w, h);
-        Gui.Panel(r, "Menu");
+        Gui.Panel(r, Localisation.Get("ui.menu"));
         float x = r.X + 20 * S, y = r.Y + 44 * S, bw = w - 40 * S, bh = 38 * S;
-        if (Gui.Button(new Rectangle(x, y, bw, bh), "Resume")) Ui.PauseMenuOpen = false;
+        if (Gui.Button(new Rectangle(x, y, bw, bh), Localisation.Get("ui.resume"))) Ui.PauseMenuOpen = false;
         y += bh + 8 * S;
-        if (Gui.Button(new Rectangle(x, y, bw, bh), "Save / Load")) { Ui.SaveMenuOpen = true; Ui.PauseMenuOpen = false; }
+        if (Gui.Button(new Rectangle(x, y, bw, bh), Localisation.Get("ui.save_load"))) { Ui.SaveMenuOpen = true; Ui.PauseMenuOpen = false; }
         y += bh + 8 * S;
-        if (Gui.Button(new Rectangle(x, y, bw, bh), "Error log (F2)")) { Ui.ErrorsOpen = true; Ui.PauseMenuOpen = false; }
+        if (Gui.Button(new Rectangle(x, y, bw, bh), Localisation.Get("ui.error_log_f2"))) { Ui.ErrorsOpen = true; Ui.PauseMenuOpen = false; }
         y += bh + 8 * S;
-        if (Gui.Button(new Rectangle(x, y, bw, bh), "Settings")) Ui.SettingsOpen = true;
+        if (Gui.Button(new Rectangle(x, y, bw, bh), Localisation.Get("ui.settings"))) Ui.SettingsOpen = true;
         y += bh + 8 * S;
-        if (Gui.Button(new Rectangle(x, y, bw, bh), "Main menu")) { Ui.PauseMenuOpen = false; _app.ReturnToMainMenu(); return; }
+        if (Gui.Button(new Rectangle(x, y, bw, bh), Localisation.Get("ui.main_menu"))) { Ui.PauseMenuOpen = false; _app.ReturnToMainMenu(); return; }
         y += bh + 8 * S;
-        if (Gui.Button(new Rectangle(x, y, bw, bh), "Quit")) _app.RequestQuit();
+        if (Gui.Button(new Rectangle(x, y, bw, bh), Localisation.Get("ui.quit"))) _app.RequestQuit();
     }
 
     private string _speed5Text = "";

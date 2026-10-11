@@ -4,7 +4,9 @@ using Burger.Core.Script;
 namespace Burger.Core;
 
 /// <summary>
-/// Text lookup. Files in <c>localisation/</c> use the normal script format:
+/// Text lookup. Shared files in <c>assets/localisation/</c> are loaded first, followed by
+/// project files in <c>game/localisation/</c>; later entries override earlier entries.
+/// Both use the normal script format:
 /// <code>berlin = "Berlin"
 /// rome.1.title = "The Ides of March"</code>
 /// Any string in data files is first looked up here; if no entry exists the string itself is shown,
@@ -47,6 +49,10 @@ public static class Localisation
         if (string.IsNullOrEmpty(keyOrText)) return "";
         return _texts.TryGetValue(keyOrText, out var t) ? t : keyOrText;
     }
+
+    /// <summary>Resolves a key or literal and formats it with the supplied values.</summary>
+    public static string Format(string keyOrText, params object[] args) =>
+        string.Format(CultureInfo.InvariantCulture, Get(keyOrText), args);
 
     /// <summary>Localised text, or a prettified version of the key (<c>new_york</c> → <c>New York</c>).</summary>
     public static string GetOrPretty(string key)

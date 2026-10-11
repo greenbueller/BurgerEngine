@@ -40,6 +40,9 @@ public static class DataLoader
     {
         var data = game.Data;
         Localisation.Clear();
+        var sharedLocalisation = EngineAssets.Find("localisation");
+        if (sharedLocalisation != null)
+            Localisation.LoadDirectory(sharedLocalisation, Directory.GetParent(sharedLocalisation)!.FullName);
         Localisation.LoadDirectory(data.PathOf("localisation"), data.Root);
 
         // game.txt

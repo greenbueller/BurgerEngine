@@ -1,6 +1,6 @@
 # Countries of 1930. The three letter tag is used everywhere to refer to the country.
 ENG = {
-	name = "United Kingdom"
+	name = country.ENG
 	color = { 200 32 48 }
 	capital = london
 	government = constitutional_monarchy
@@ -9,7 +9,7 @@ ENG = {
 	accepted_cultures = { scottish welsh }
 }
 FRA = {
-	name = "France"
+	name = country.FRA
 	color = { 57 96 170 }
 	capital = paris
 	government = republic
@@ -17,7 +17,7 @@ FRA = {
 	religion = catholic
 }
 SOV = {
-	name = "Soviet Union"
+	name = country.SOV
 	color = { 150 30 30 }
 	capital = moscow
 	government = socialist_republic
@@ -26,7 +26,7 @@ SOV = {
 	accepted_cultures = { ukrainian belarusian }
 }
 CHI = {
-	name = "China"
+	name = country.CHI
 	color = { 220 200 90 }
 	capital = nanjing
 	government = republic
@@ -34,7 +34,7 @@ CHI = {
 	religion = chinese_folk
 }
 USA = {
-	name = "United States"
+	name = country.USA
 	color = { 40 80 160 }
 	capital = washington_d_c
 	government = republic
@@ -42,7 +42,7 @@ USA = {
 	religion = protestant
 }
 RAJ = {
-	name = "British Raj"
+	name = country.RAJ
 	color = { 210 150 80 }
 	capital = delhi
 	government = colonial_government
@@ -51,7 +51,7 @@ RAJ = {
 	accepted_cultures = { bengali punjabi marathi gujarati tamil telugu kannada malayali oriya }
 }
 TUR = {
-	name = "Turkey"
+	name = country.TUR
 	color = { 190 80 70 }
 	capital = ankara
 	government = republic
@@ -59,7 +59,7 @@ TUR = {
 	religion = sunni
 }
 BRA = {
-	name = "Brazil"
+	name = country.BRA
 	color = { 60 160 60 }
 	capital = rio_de_janeiro
 	government = republic
@@ -67,7 +67,7 @@ BRA = {
 	religion = catholic
 }
 POR = {
-	name = "Portugal"
+	name = country.POR
 	color = { 40 110 60 }
 	capital = lisbon
 	government = republic
@@ -75,7 +75,7 @@ POR = {
 	religion = catholic
 }
 SPA = {
-	name = "Spain"
+	name = country.SPA
 	color = { 220 190 40 }
 	capital = madrid
 	government = kingdom
@@ -84,7 +84,7 @@ SPA = {
 	accepted_cultures = { catalan galician }
 }
 ITA = {
-	name = "Italy"
+	name = country.ITA
 	color = { 60 140 70 }
 	capital = rome
 	government = kingdom
@@ -92,7 +92,7 @@ ITA = {
 	religion = catholic
 }
 JAP = {
-	name = "Japan"
+	name = country.JAP
 	color = { 240 240 240 }
 	capital = yokohama
 	government = empire
@@ -100,7 +100,7 @@ JAP = {
 	religion = shinto
 }
 HOL = {
-	name = "Netherlands"
+	name = country.HOL
 	color = { 230 120 30 }
 	capital = amsterdam
 	government = kingdom
@@ -108,7 +108,7 @@ HOL = {
 	religion = protestant
 }
 PER = {
-	name = "Persia"
+	name = country.PER
 	color = { 90 150 110 }
 	capital = tehran
 	government = kingdom
@@ -116,7 +116,7 @@ PER = {
 	religion = shia
 }
 GER = {
-	name = "Germany"
+	name = country.GER
 	color = { 96 96 96 }
 	capital = berlin
 	government = republic
@@ -124,7 +124,7 @@ GER = {
 	religion = protestant
 }
 MEX = {
-	name = "Mexico"
+	name = country.MEX
 	color = { 110 160 90 }
 	capital = mexico_city
 	government = republic
@@ -132,7 +132,7 @@ MEX = {
 	religion = catholic
 }
 AST = {
-	name = "Australia"
+	name = country.AST
 	color = { 70 110 200 }
 	capital = canberra
 	government = dominion
@@ -140,7 +140,7 @@ AST = {
 	religion = protestant
 }
 ARG = {
-	name = "Argentina"
+	name = country.ARG
 	color = { 130 180 230 }
 	capital = buenos_aires
 	government = republic
@@ -148,7 +148,7 @@ ARG = {
 	religion = catholic
 }
 ROM = {
-	name = "Romania"
+	name = country.ROM
 	color = { 220 190 80 }
 	capital = bucharest
 	government = kingdom
@@ -156,7 +156,7 @@ ROM = {
 	religion = orthodox
 }
 BEL = {
-	name = "Belgium"
+	name = country.BEL
 	color = { 210 180 60 }
 	capital = antwerpen
 	government = kingdom
@@ -165,7 +165,7 @@ BEL = {
 	accepted_cultures = { walloon }
 }
 POL = {
-	name = "Poland"
+	name = country.POL
 	color = { 200 70 90 }
 	capital = warsaw
 	government = republic
@@ -173,7 +173,7 @@ POL = {
 	religion = catholic
 }
 CAN = {
-	name = "Canada"
+	name = country.CAN
 	color = { 205 105 75 }
 	capital = ottawa
 	government = dominion
@@ -182,7 +182,7 @@ CAN = {
 	accepted_cultures = { french_canadian }
 }
 YUG = {
-	name = "Yugoslavia"
+	name = country.YUG
 	color = { 90 120 170 }
 	capital = belgrade
 	government = kingdom
@@ -191,7 +191,7 @@ YUG = {
 	accepted_cultures = { croat slovene }
 }
 COL = {
-	name = "Colombia"
+	name = country.COL
 	color = { 230 200 60 }
 	capital = bogota
 	government = republic
@@ -199,7 +199,7 @@ COL = {
 	religion = catholic
 }
 SAU = {
-	name = "Hejaz and Nejd"
+	name = country.SAU
 	color = { 90 160 80 }
 	capital = riyadh
 	government = kingdom
@@ -207,7 +207,7 @@ SAU = {
 	religion = sunni
 }
 FIN = {
-	name = "Finland"
+	name = country.FIN
 	color = { 230 240 250 }
 	capital = helsinki
 	government = republic
@@ -215,7 +215,7 @@ FIN = {
 	religion = protestant
 }
 VEN = {
-	name = "Venezuela"
+	name = country.VEN
 	color = { 210 170 60 }
 	capital = caracas
 	government = republic
@@ -223,7 +223,7 @@ VEN = {
 	religion = catholic
 }
 PRU = {
-	name = "Peru"
+	name = country.PRU
 	color = { 190 70 70 }
 	capital = lima
 	government = republic
@@ -231,7 +231,7 @@ PRU = {
 	religion = catholic
 }
 SAF = {
-	name = "South Africa"
+	name = country.SAF
 	color = { 220 130 40 }
 	capital = pretoria
 	government = dominion
@@ -240,7 +240,7 @@ SAF = {
 	accepted_cultures = { english }
 }
 CZE = {
-	name = "Czechoslovakia"
+	name = country.CZE
 	color = { 60 140 160 }
 	capital = prague
 	government = republic
@@ -249,7 +249,7 @@ CZE = {
 	accepted_cultures = { slovak }
 }
 GRE = {
-	name = "Greece"
+	name = country.GRE
 	color = { 100 160 220 }
 	capital = athens_peloponnese
 	government = republic
@@ -257,7 +257,7 @@ GRE = {
 	religion = orthodox
 }
 SWE = {
-	name = "Sweden"
+	name = country.SWE
 	color = { 40 100 190 }
 	capital = stockholm
 	government = kingdom
@@ -265,7 +265,7 @@ SWE = {
 	religion = protestant
 }
 BUL = {
-	name = "Bulgaria"
+	name = country.BUL
 	color = { 80 150 80 }
 	capital = sofia
 	government = kingdom
@@ -273,7 +273,7 @@ BUL = {
 	religion = orthodox
 }
 SIA = {
-	name = "Siam"
+	name = country.SIA
 	color = { 100 120 200 }
 	capital = bangkok
 	government = kingdom
@@ -281,7 +281,7 @@ SIA = {
 	religion = buddhist
 }
 ETH = {
-	name = "Ethiopia"
+	name = country.ETH
 	color = { 90 150 70 }
 	capital = addis_ababa
 	government = empire
@@ -289,7 +289,7 @@ ETH = {
 	religion = oriental
 }
 NZL = {
-	name = "New Zealand"
+	name = country.NZL
 	color = { 60 90 170 }
 	capital = wellington
 	government = dominion
@@ -297,7 +297,7 @@ NZL = {
 	religion = protestant
 }
 NOR = {
-	name = "Norway"
+	name = country.NOR
 	color = { 150 70 70 }
 	capital = oslo
 	government = kingdom
@@ -305,7 +305,7 @@ NOR = {
 	religion = protestant
 }
 AFG = {
-	name = "Afghanistan"
+	name = country.AFG
 	color = { 120 140 90 }
 	capital = kabul
 	government = kingdom
@@ -313,7 +313,7 @@ AFG = {
 	religion = sunni
 }
 BOL = {
-	name = "Bolivia"
+	name = country.BOL
 	color = { 140 150 70 }
 	capital = la_paz
 	government = republic
@@ -321,7 +321,7 @@ BOL = {
 	religion = catholic
 }
 HUN = {
-	name = "Hungary"
+	name = country.HUN
 	color = { 170 110 60 }
 	capital = budapest
 	government = kingdom
@@ -329,7 +329,7 @@ HUN = {
 	religion = catholic
 }
 ECU = {
-	name = "Ecuador"
+	name = country.ECU
 	color = { 230 210 80 }
 	capital = quito
 	government = republic
@@ -337,7 +337,7 @@ ECU = {
 	religion = catholic
 }
 DEN = {
-	name = "Denmark"
+	name = country.DEN
 	color = { 190 60 60 }
 	capital = kobenhavn
 	government = kingdom
@@ -345,7 +345,7 @@ DEN = {
 	religion = protestant
 }
 SIK = {
-	name = "Xinjiang"
+	name = country.SIK
 	color = { 140 120 80 }
 	capital = urumqi
 	government = warlord_state
@@ -353,7 +353,7 @@ SIK = {
 	religion = sunni
 }
 MON = {
-	name = "Mongolia"
+	name = country.MON
 	color = { 160 110 60 }
 	capital = ulaanbaatar
 	government = socialist_republic
@@ -361,7 +361,7 @@ MON = {
 	religion = buddhist
 }
 AUS = {
-	name = "Austria"
+	name = country.AUS
 	color = { 230 230 230 }
 	capital = vienna
 	government = republic
@@ -369,7 +369,7 @@ AUS = {
 	religion = catholic
 }
 CHL = {
-	name = "Chile"
+	name = country.CHL
 	color = { 200 90 110 }
 	capital = santiago
 	government = republic
@@ -377,7 +377,7 @@ CHL = {
 	religion = catholic
 }
 PAR = {
-	name = "Paraguay"
+	name = country.PAR
 	color = { 150 110 160 }
 	capital = asuncion
 	government = republic
@@ -385,7 +385,7 @@ PAR = {
 	religion = catholic
 }
 TIB = {
-	name = "Tibet"
+	name = country.TIB
 	color = { 200 170 140 }
 	capital = lhasa
 	government = theocracy
@@ -393,7 +393,7 @@ TIB = {
 	religion = buddhist
 }
 OMA = {
-	name = "Muscat and Oman"
+	name = country.OMA
 	color = { 180 70 70 }
 	capital = muscat
 	government = sultanate
@@ -401,7 +401,7 @@ OMA = {
 	religion = ibadi
 }
 LIT = {
-	name = "Lithuania"
+	name = country.LIT
 	color = { 210 200 60 }
 	capital = kaunas
 	government = republic
@@ -409,7 +409,7 @@ LIT = {
 	religion = catholic
 }
 SWI = {
-	name = "Switzerland"
+	name = country.SWI
 	color = { 190 40 40 }
 	capital = bern
 	government = republic
@@ -418,7 +418,7 @@ SWI = {
 	accepted_cultures = { swiss_french italian }
 }
 HON = {
-	name = "Honduras"
+	name = country.HON
 	color = { 60 110 190 }
 	capital = tegucigalpa
 	government = republic
@@ -426,7 +426,7 @@ HON = {
 	religion = catholic
 }
 URU = {
-	name = "Uruguay"
+	name = country.URU
 	color = { 120 170 220 }
 	capital = montevideo
 	government = republic
@@ -434,7 +434,7 @@ URU = {
 	religion = catholic
 }
 CUB = {
-	name = "Cuba"
+	name = country.CUB
 	color = { 70 100 180 }
 	capital = havana
 	government = republic
@@ -442,7 +442,7 @@ CUB = {
 	religion = catholic
 }
 NEP = {
-	name = "Nepal"
+	name = country.NEP
 	color = { 180 80 90 }
 	capital = kathmandu
 	government = kingdom
@@ -450,7 +450,7 @@ NEP = {
 	religion = hindu
 }
 GUA = {
-	name = "Guatemala"
+	name = country.GUA
 	color = { 90 160 210 }
 	capital = guatemala
 	government = republic
@@ -458,7 +458,7 @@ GUA = {
 	religion = catholic
 }
 YEM = {
-	name = "Yemen"
+	name = country.YEM
 	color = { 170 120 90 }
 	capital = sanaa
 	government = kingdom
@@ -466,7 +466,7 @@ YEM = {
 	religion = sunni
 }
 IRE = {
-	name = "Irish Free State"
+	name = country.IRE
 	color = { 60 160 80 }
 	capital = dublin
 	government = dominion
@@ -474,7 +474,7 @@ IRE = {
 	religion = catholic
 }
 EST = {
-	name = "Estonia"
+	name = country.EST
 	color = { 70 120 190 }
 	capital = tallinn
 	government = republic
@@ -482,7 +482,7 @@ EST = {
 	religion = protestant
 }
 LAT = {
-	name = "Latvia"
+	name = country.LAT
 	color = { 140 50 60 }
 	capital = riga
 	government = republic
@@ -490,7 +490,7 @@ LAT = {
 	religion = protestant
 }
 LUX = {
-	name = "Luxembourg"
+	name = country.LUX
 	color = { 120 170 220 }
 	capital = luxembourg
 	government = grand_duchy
@@ -498,7 +498,7 @@ LUX = {
 	religion = catholic
 }
 ALB = {
-	name = "Albania"
+	name = country.ALB
 	color = { 150 40 40 }
 	capital = tirana
 	government = kingdom
@@ -506,7 +506,7 @@ ALB = {
 	religion = sunni
 }
 TAN = {
-	name = "Tannu Tuva"
+	name = country.TAN
 	color = { 130 160 120 }
 	capital = kyzyl
 	government = socialist_republic
@@ -514,7 +514,7 @@ TAN = {
 	religion = buddhist
 }
 LIB = {
-	name = "Liberia"
+	name = country.LIB
 	color = { 200 120 120 }
 	capital = monrovia
 	government = republic
@@ -522,7 +522,7 @@ LIB = {
 	religion = animist
 }
 COS = {
-	name = "Costa Rica"
+	name = country.COS
 	color = { 150 60 90 }
 	capital = san_jose_puntarenas
 	government = republic
@@ -530,7 +530,7 @@ COS = {
 	religion = catholic
 }
 BHU = {
-	name = "Bhutan"
+	name = country.BHU
 	color = { 220 150 60 }
 	capital = thimphu
 	government = kingdom
@@ -538,7 +538,7 @@ BHU = {
 	religion = buddhist
 }
 PAN = {
-	name = "Panama"
+	name = country.PAN
 	color = { 200 80 80 }
 	capital = panama_city
 	government = republic
@@ -546,7 +546,7 @@ PAN = {
 	religion = catholic
 }
 NIC = {
-	name = "Nicaragua"
+	name = country.NIC
 	color = { 80 130 200 }
 	capital = managua
 	government = republic
@@ -554,7 +554,7 @@ NIC = {
 	religion = catholic
 }
 ELS = {
-	name = "El Salvador"
+	name = country.ELS
 	color = { 40 90 170 }
 	capital = san_salvador
 	government = republic
@@ -562,7 +562,7 @@ ELS = {
 	religion = catholic
 }
 NFL = {
-	name = "Newfoundland"
+	name = country.NFL
 	color = { 175 140 115 }
 	capital = st_john_s
 	government = dominion
@@ -570,7 +570,7 @@ NFL = {
 	religion = protestant
 }
 ICE = {
-	name = "Iceland"
+	name = country.ICE
 	color = { 110 160 210 }
 	capital = reykjavik
 	government = kingdom
@@ -578,7 +578,7 @@ ICE = {
 	religion = protestant
 }
 HAI = {
-	name = "Haiti"
+	name = country.HAI
 	color = { 60 70 160 }
 	capital = port_au_prince
 	government = republic
@@ -586,7 +586,7 @@ HAI = {
 	religion = catholic
 }
 DOM = {
-	name = "Dominican Republic"
+	name = country.DOM
 	color = { 100 80 160 }
 	capital = santo_domingo
 	government = republic
@@ -594,7 +594,7 @@ DOM = {
 	religion = catholic
 }
 DNZ = {
-	name = "Free City of Danzig"
+	name = country.DNZ
 	color = { 170 90 90 }
 	capital = danzig
 	government = free_city

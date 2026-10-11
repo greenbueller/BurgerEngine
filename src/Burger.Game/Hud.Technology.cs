@@ -1,3 +1,4 @@
+using Burger.Core;
 using Burger.Core.Model;
 using Burger.Core.Technology;
 using Raylib_cs;
@@ -14,7 +15,7 @@ public sealed partial class Hud
         var player = G.World.Player;
         if (player == null) { Ui.Left = LeftPanel.None; return; }
         var r = LeftRect(2000);
-        Gui.Panel(r, "Technology");
+        Gui.Panel(r, Localisation.Get("ui.technology"));
         if (Gui.CloseButton(r)) { CloseLeft(); return; }
         float x = r.X + 10 * S, y = r.Y + 36 * S, w = r.Width - 20 * S;
         var T = G.Tech;
@@ -36,10 +37,10 @@ public sealed partial class Hud
                 double cost = rules.Cost(G, player, slot.Tech);
                 Gui.Label(slot.Tech.Name, x + 8 * S, y + 4 * S, 15, Gui.Gold, FontKind.Bold);
                 Gui.Bar(new Rectangle(x + 8 * S, y + 26 * S, w - 80 * S, 10 * S), (float)Math.Clamp(slot.Progress / Math.Max(1, cost), 0, 1), new Color(110, 170, 230, 255));
-                if (Gui.Button(new Rectangle(x + w - 62 * S, y + 8 * S, 50 * S, 26 * S), "Drop", true, "Stop researching (the progress is lost)", false, 13)) T.Cancel(player, slot);
+                if (Gui.Button(new Rectangle(x + w - 62 * S, y + 8 * S, 50 * S, 26 * S), Localisation.Get("ui.drop"), true, Localisation.Get("ui.stop_researching"), false, 13)) T.Cancel(player, slot);
                 if (Gui.Hover(box)) Gui.Tooltip(TechTip(slot.Tech, player));
             }
-            else Gui.Label("Free slot - pick a technology below", x + 8 * S, y + 13 * S, 14, Gui.TextDim);
+            else Gui.Label(Localisation.Get("ui.free_research_slot"), x + 8 * S, y + 13 * S, 14, Gui.TextDim);
             y += 50 * S;
         }
 
@@ -64,14 +65,14 @@ public sealed partial class Hud
         {
             var box = new Rectangle(x, dy, w - 8 * S, rowH);
             bool known = T.Has(player, t.Key);
-            string? why = known ? "Known" : T.CannotResearch(player, t);
+            string? why = known ? Localisation.Get("ui.known") : T.CannotResearch(player, t);
             bool busy = current.Any(s => s.Tech == t);
             Card(box, known ? new Color(40, 58, 44, 255) : busy ? new Color(40, 50, 70, 255) : new Color(36, 38, 44, 255), busy);
             Gui.Label(Gui.Fit(t.Name, w - 150 * S, 15, FontKind.Bold), x + 8 * S, dy + 4 * S, 15, known ? Gui.Good : Gui.Text, FontKind.Bold);
-            string sub = known ? "known" : $"{t.Year:0}, {rules.Cost(G, player, t):0} points";
+            string sub = known ? Localisation.Get("ui.known_lower") : $"{t.Year:0}, {rules.Cost(G, player, t):0} points";
             Gui.Label(sub, x + 8 * S, dy + 22 * S, 12, Gui.TextDim);
             if (Gui.Hover(box)) Gui.Tooltip(TechTip(t, player));
-            if (!known && !busy && Gui.Button(new Rectangle(x + w - 90 * S, dy + 6 * S, 76 * S, 26 * S), "Research", why == null, why ?? TechTip(t, player), false, 13))
+            if (!known && !busy && Gui.Button(new Rectangle(x + w - 90 * S, dy + 6 * S, 76 * S, 26 * S), Localisation.Get("ui.research"), why == null, why ?? TechTip(t, player), false, 13))
                 Ui.SetStatus(T.Start(player, t) ?? $"Researching {t.Name}");
             dy += rowH + 4 * S;
         }

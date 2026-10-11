@@ -46,14 +46,20 @@ FF0000 = { name = new_york terrain = hills fort = 2 }
 0A0A78 = { name = north_sea type = sea }            # type: land (default), sea, lake, impassable
 ```
 
-- The name is the id used in every other file. The displayed name comes from `localisation/*.txt`
-  (`berlin = "Berlin"`); if there is none, `new_york` is shown as "New York".
+- The name is the id used in every other file. The displayed name comes from
+  `localisation/<language>/*.txt` (`english` is the fallback language), such as
+  `berlin = "Berlin"`; if there is none, `new_york` is shown as "New York".
 - Colors missing from the file still work (they are named `loc_rrggbb` and a warning is logged).
   **`burger generate-locations <project>`** appends a generated name for every missing color, so after
   painting new provinces you only have to rename them.
 - Terrain is taken from the most common `terrain.png` color inside the location unless `terrain =` is given.
 - `map/adjacencies.txt` adds straits (`adjacency = { from = a to = b type = strait }`) or blocks borders
   (`type = impassable`).
+
+Localisation files use the script format `key = "text"`. Universal English text belongs in
+the engine's shared `assets/localisation/english/` folder; base- or project-specific English
+text belongs in `game/localisation/english/`. Separate categories into files such as
+`ui.txt` and `locations.txt`. Additional language folders can be added alongside `english`.
 
 ### States: `map/states/*.txt`
 

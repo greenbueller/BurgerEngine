@@ -29,11 +29,11 @@ public sealed partial class Hud
         if (player == null || !Has(FeatureSet.Production)) { CloseLeft(); return; }
         var r = LeftRect(2000);
         r.Width = 440 * S;
-        Gui.Panel(r, "Production");
+        Gui.Panel(r, Localisation.Get("ui.production"));
         if (Gui.CloseButton(r)) { CloseLeft(); return; }
         float x = r.X + 12 * S, y = r.Y + Gui.HeaderHeight + 10 * S, w = r.Width - 24 * S;
         int tab = Ui.ProductionTab;
-        if (Tabs(x, y, w, new[] { "Production", "Construction", "Stockpile" }, ref tab)) { _addingLine = false; _changingLine = null; }
+        if (Tabs(x, y, w, new[] { Localisation.Get("ui.production"), Localisation.Get("ui.construction"), Localisation.Get("ui.stockpile") }, ref tab)) { _addingLine = false; _changingLine = null; }
         Ui.ProductionTab = tab;
         if (tab != 1) Ui.BuildType = null;
         y += 36 * S;
@@ -54,7 +54,7 @@ public sealed partial class Hud
         y += 24 * S;
         if (_addingLine || _changingLine != null)
         {
-            Gui.Section(_changingLine != null ? "Produce instead" : "New production line", x, y, w);
+            Gui.Section(_changingLine != null ? Localisation.Get("ui.produce_instead") : Localisation.Get("ui.new_production_line"), x, y, w);
             y += 26 * S;
             float top = Gui.BeginScroll("equip", new Rectangle(x, y, w, r.Y + r.Height - y - 50 * S), G.Data.Equipment.Count * 32 * S);
             float ey = top;
@@ -71,7 +71,7 @@ public sealed partial class Hud
                 ey += 32 * S;
             }
             Gui.EndScroll();
-            if (Gui.Button(new Rectangle(x, r.Y + r.Height - 42 * S, w, 30 * S), "Cancel", true, null, false, 15)) { _addingLine = false; _changingLine = null; }
+            if (Gui.Button(new Rectangle(x, r.Y + r.Height - 42 * S, w, 30 * S), Localisation.Get("ui.cancel"), true, null, false, 15)) { _addingLine = false; _changingLine = null; }
             return;
         }
         float rowH = 76 * S;

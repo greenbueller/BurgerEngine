@@ -81,10 +81,13 @@ game/
   map/states/*.txt              states: locations, owner, cores, claims
   history/characters/  history/units/  history/diplomacy.txt
   events/*.txt                  country_event / character_event
-  localisation/*.txt            key = "text"
+  localisation/<language>/*.txt key = "text" (English fallback)
   gfx/flags/TAG.png  gfx/terrain/*.png
   scripts/*.cs                  C# mod scripts
 ```
+
+Universal localisation is supplied by the engine in `assets/localisation/`; project and base
+localisation in `game/localisation/` is loaded afterward and overrides shared keys.
 
 ## Burger Studio (the editor)
 
@@ -177,4 +180,3 @@ diplomacy feature). It is made from public-domain Natural Earth data and free el
 `tools/earth/make_earth.py`; the 1930 world itself (who owned what, capitals, colors, flags) is in
 `tools/earth/earth1930_data.py`, so another start date is a matter of editing that file and running the generator
 (see `tools/earth/README.txt`). Sources are listed in `game/map/SOURCES.txt`.
-
